@@ -1,0 +1,99 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blast Community</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#0b0912;color:#f8f7ff;font-family:Arial,sans-serif}
+header{background:#0b0912;padding:22px 5%;border-bottom:3px solid #8b2cf5;position:sticky;top:0;z-index:5}
+nav{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap}
+.logo{font-size:25px;font-weight:900;background:linear-gradient(90deg,#f000ff,#14caff);color:transparent;background-clip:text}
+nav a{color:white;text-decoration:none;font-weight:bold;margin:8px}
+nav a:hover{color:#d946ef}
+.hero{text-align:center;min-height:85vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 20px;background:radial-gradient(ellipse,#48115e 0%,#171020 40%,#0b0912 75%)}
+h1{font-size:clamp(42px,9vw,82px);font-weight:1000;line-height:1.1;background:linear-gradient(90deg,#f000ff,#783cff,#10dfff);color:transparent;background-clip:text}
+.hero p{font-size:clamp(18px,4vw,30px);font-weight:bold;letter-spacing:5px;margin:28px 0}
+.btn{display:inline-block;padding:18px 35px;border-radius:16px;background:linear-gradient(90deg,#ef00ff,#06cfff);color:white;text-decoration:none;font-weight:bold;font-size:18px;border:0;cursor:pointer}
+section{padding:75px 7%;text-align:center;scroll-margin-top:100px}
+h2{font-size:clamp(30px,6vw,48px);margin-bottom:35px;background:linear-gradient(90deg,#ef00ff,#16d9ff);color:transparent;background-clip:text}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.card{background:#1a182b;border:1px solid #57218b;border-radius:22px;padding:30px 20px}
+.card h3{font-size:24px;margin:15px 0}
+.card p{color:#c9c5d5;line-height:1.7}
+.symbol{font-size:48px}
+#about p{font-size:18px;line-height:1.9;color:#c9c5d5;max-width:750px;margin:auto}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:15px}
+.gallery div{min-height:140px;border-radius:18px;background:linear-gradient(135deg,#4b126c,#151c45,#087b9a);display:grid;place-items:center;font-size:35px;border:1px solid #7733b8}
+footer{text-align:center;padding:30px;color:#aaa;border-top:1px solid #402055}
+#lang{background:#21162e;color:white;border:1px solid #a855f7;padding:10px;border-radius:10px}
+@media(max-width:600px){header{padding:18px 12px}nav{justify-content:center}nav a{font-size:12px;margin:5px}.hero{min-height:75vh}.hero p{letter-spacing:2px}section{padding:55px 18px}}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class="logo">✦ BLAST</div>
+<div>
+<a href="#home" data-en="HOME" data-ku="سەرەتا">HOME</a>
+<a href="#leadership" data-en="LEADERSHIP" data-ku="بەڕێوەبەران">LEADERSHIP</a>
+<a href="#gallery" data-en="GALLERY" data-ku="وێنەکان">GALLERY</a>
+<a href="#about" data-en="ABOUT US" data-ku="دەربارەمان">ABOUT US</a>
+</div>
+<select id="lang" aria-label="Choose language">
+<option value="en">English</option>
+<option value="ku">کوردی</option>
+</select>
+</nav>
+</header>
+<main>
+<section class="hero" id="home">
+<h1>BLAST<br>COMMUNITY</h1>
+<p id="slogan">POWER • RESPECT • CONTROL</p>
+<a class="btn" href="#about" id="join">JOIN THE FAMILY</a>
+</section>
+<section id="leadership">
+<h2 data-en="Our Leadership" data-ku="بەڕێوەبەرانی ئێمە">Our Leadership</h2>
+<div class="cards">
+<div class="card"><div class="symbol">👑</div><h3 data-en="Founder" data-ku="دامەزرێنەر">Founder</h3><p>! The Blast</p><p data-en="The tactical mind behind the movement." data-ku="مێشکی ستراتیژی پشت ئەم کۆمەڵگەیە.">The tactical mind behind the movement.</p></div>
+<div class="card"><div class="symbol">🛡️</div><h3 data-en="Manager" data-ku="بەڕێوەبەر">Manager</h3><p>Blast Barzani</p><p data-en="Leading with loyalty and respect." data-ku="بە دڵسۆزی و ڕێزەوە سەرکردایەتی دەکات.">Leading with loyalty and respect.</p></div>
+<div class="card"><div class="symbol">⚡</div><h3 data-en="Our Team" data-ku="تیمی ئێمە">Our Team</h3><p data-en="United as one community." data-ku="وەک کۆمەڵگەیەک یەکگرتووین.">United as one community.</p></div>
+</div>
+</section>
+<section id="gallery">
+<h2 data-en="Gallery" data-ku="وێنەکان">Gallery</h2>
+<div class="gallery"><div>⚡</div><div>👑</div><div>🛡️</div><div>💜</div></div>
+</section>
+<section id="about">
+<h2 data-en="About Us / دەربارەی ئێمە" data-ku="دەربارەی ئێمە">About Us / دەربارەی ئێمە</h2>
+<div class="cards">
+<div class="card"><h3>🛡️ Loyalty</h3><p>وەفاداری: ئێمە یەک خێزانین.</p></div>
+<div class="card"><h3>🤫 Trust</h3><p>متمانە: لە خۆیتمان دایە.</p></div>
+<div class="card"><h3>👑 Respect</h3><p>ڕێزگرتن: کاری لە پێشینەمانە.</p></div>
+<div class="card"><h3>🎨 Blast</h3><p>بلاست: خۆمان مۆرە.</p></div>
+</div>
+</section>
+</main>
+<footer>© 2026 Blast Community • Power • Respect • Control</footer>
+<script>
+const lang=document.getElementById('lang');
+lang.addEventListener('change',()=>{
+const ku=lang.value==='ku';
+document.documentElement.lang=ku?'ku':'en';
+document.querySelectorAll('[data-en]').forEach(el=>{
+el.textContent=ku?el.dataset.ku:el.dataset.en;
+});
+document.getElementById('slogan').textContent=ku?'هێز • ڕێز • کۆنترۆڵ':'POWER • RESPECT • CONTROL';
+document.getElementById('join').textContent=ku?'ببە بە ئەندامی خێزان':'JOIN THE FAMILY';
+});
+document.getElementById('join').addEventListener('click',e=>{
+e.preventDefault();
+document.getElementById('about').scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
+```
